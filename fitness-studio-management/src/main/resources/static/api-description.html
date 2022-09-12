@@ -1,0 +1,19 @@
+api.description= \
+This application is used to manage a fitness studio. \
+<h3>Main application's functionalities:</h3> \
+<ul> \
+    <li>Different CRUD operations for Users, Gym Events, Fitness classes and Trainers</li> \
+    <li>Ability to assign/unassign a trainer to/from a fitness class</li> \
+    <li>Ability to add the fitness class to a gym event</li> \
+    <li>Registering a user in the system</li> \
+    <li>Possibility for a logged user to participate (enroll/disenroll) in the gym events</li> \
+</ul> \
+<h4>IMPORTANT: To use different endpoints it may be necessary to log in</h4> \
+<p>The application is secured with a JWT token. </p> \
+<p>To obtain the <strong>access_token*</strong> it is recommended to use an API platform (e.g. Postman)</p> \
+<h4>Request URL for login: localhost: http://localhost:8080/api/v1/login</h4> \
+<p>Sample credentials after data creation by a CommandLineRunner </p> \
+<p>{ username: "user", password: "password" } - role <strong>USER</strong></p> \
+<p>{ username: "admin", password: "password" } - role <strong>ADMIN</strong></p> \
+<h4>To Authorize and test the API's endpoints with granted permissions add: Bearer access_token<strong>*</strong></h4> \
+<p>Requirements for the permissions are described in the notes of every request.<p> \
