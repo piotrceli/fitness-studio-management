@@ -13,9 +13,10 @@ This application is used to manage a fitness studio.
 <h3>Used technologies:</h3>
 <ol>
   <li>Java</li>
-  <li>Spring</li>
+  <li>Spring Boot, Spring Security, Spring Data JPA</li>
+  <li>JUnit, AssertJ, Mockito</li>
   <li>MySQL</li>
-  <li>Swagger</li>
+  <li>Lombok, Swagger</li>
 </ol>
 <br> 
 <h3>Testing flow proposal:</h3>
