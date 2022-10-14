@@ -32,7 +32,7 @@ public class AppUser {
     @Column(name = "username")
     private String username;
 
-    @Column(name = "password")
+    @Column(name = "user_password")
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)

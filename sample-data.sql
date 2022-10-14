@@ -1,9 +1,9 @@
 use fitness_studio_management;
 
-INSERT INTO role (name)
+INSERT INTO app_role (role_name)
 VALUES ('ADMIN'), ('USER');
 
-INSERT INTO app_user (username, password, first_name, last_name, email, date_of_birth, enabled)
+INSERT INTO app_user (username, user_password, first_name, last_name, email, date_of_birth, enabled)
 VALUES ('admin', '$2a$10$RCisbeq2PYJyQ6NKD17GK.SG3WsxvGUYIvn4YefKefeW/BThBwb6S', 'admin', 'admin', 'admin@email.com', '1987-02-02', 1),
 ('user', '$2a$10$Hmqwxieg4dBZC/aJbfPcjulosT31ld8FZd7BvP.LFUrFC12TCzQtO', 'user', 'user', 'user@email.com', '1976-03-01', 1),
 ('tom', '$2a$10$W6YnXBnxAGIDkK/wTpwwpuS.4CIBd7NsnNcfYpwVln4GymPFLTHIm', 'tom', 'jones', 'tom@email.com', '2000-01-14', 1),
@@ -19,14 +19,14 @@ VALUES ('admin', '$2a$10$RCisbeq2PYJyQ6NKD17GK.SG3WsxvGUYIvn4YefKefeW/BThBwb6S',
 INSERT INTO user_role 
 VALUES (1,1), (2,2), (3,2), (4,2), (5,2), (6,2), (7,2), (8,2), (9,2), (10,2), (11,2);
 
-INSERT INTO trainer (first_name, last_name, email, description)
+INSERT INTO trainer (first_name, last_name, email, trainer_description)
 VALUES('james', 'taylor', 'james@gmail.com', 'crossfit trainer with 10 years of experience'),
 ('noah', 'white', 'noah@gmail.com', 'yoga trainer'),
 ('amelia', 'harris', 'amelia@gmail.com', 'personal trainer'),
 ('ava', 'lewis', 'ava@gmail.com', 'boxing trainer'),
 ('olivia', 'sanchez', 'olivia@gmail.com', 'cycling trainer');
 
-INSERT INTO fitness_class (name, difficulty_level, description)
+INSERT INTO fitness_class (fitness_class_name, difficulty_level, fitness_class_description)
 VALUES ('Crossfit', 1, 'crossfit class for intermadiate'),
 ('Yoga', 2, 'yoga class for advanced'),
 ('FBW', 0, 'full body workout class for beginners'),

@@ -29,13 +29,13 @@ public class FitnessClass {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "name")
+    @Column(name = "fitness_class_name")
     private String name;
 
     @Column(name = "difficulty_level")
     private DifficultyLevel difficultyLevel;
 
-    @Column(name = "description")
+    @Column(name = "fitness_class_description")
     private String description;
 
     @ManyToMany

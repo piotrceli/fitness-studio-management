@@ -32,6 +32,6 @@ public class Trainer {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "description")
+    @Column(name = "trainer_description")
     private String description;
 }
