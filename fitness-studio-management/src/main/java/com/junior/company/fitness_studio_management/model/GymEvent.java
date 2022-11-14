@@ -2,6 +2,7 @@ package com.junior.company.fitness_studio_management.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Column;
@@ -38,6 +39,7 @@ public class GymEvent {
     private LocalDateTime endTime;
 
     @Column(name = "duration")
+    @Setter
     private String duration;
 
     @Column(name = "participants_limit")
@@ -54,16 +56,9 @@ public class GymEvent {
 
     @ManyToOne
     @JoinColumn(name = "fitness_class_id")
+    @Setter
     private FitnessClass fitnessClass;
-
-    public void setFitnessClass(FitnessClass fitnessClass) {
-        this.fitnessClass = fitnessClass;
-    }
-
-    public void setDuration(String duration) {
-        this.duration = duration;
-    }
-
+    
     public boolean addParticipant(AppUser appUser) {
         if (Objects.equals(enrolledParticipants, null)) {
             enrolledParticipants = new ArrayList<>();

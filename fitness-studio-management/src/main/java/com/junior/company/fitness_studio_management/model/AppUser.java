@@ -2,6 +2,7 @@ package com.junior.company.fitness_studio_management.model;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Column;
@@ -30,15 +31,18 @@ public class AppUser {
     private Long id;
 
     @Column(name = "username")
+    @Setter
     private String username;
 
     @Column(name = "user_password")
+    @Setter
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "user_role",
             joinColumns = @JoinColumn(name = "app_user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
+    @Setter
     private List<Role> roles;
 
     @Column(name = "first_name")
@@ -54,6 +58,7 @@ public class AppUser {
     private LocalDate dob;
 
     @Column(name = "enabled")
+    @Setter
     private boolean isEnabled;
 
     @ManyToMany
@@ -61,20 +66,4 @@ public class AppUser {
             joinColumns = @JoinColumn(name = "app_user_id"),
             inverseJoinColumns = @JoinColumn(name = "gym_event_id"))
     private List<GymEvent> gymEvents;
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
-
-    public void setEnabled(boolean enabled) {
-        isEnabled = enabled;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
 }
